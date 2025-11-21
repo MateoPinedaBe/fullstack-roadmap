@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<!--
+    1.1. !DOCTYPE: Define el tipo de documento. Es la primera línea de cualquier documento HTML.
+    Indica al navegador que espere un documento HTML5.
+-->
+
+<html lang="es">
+<!--
+    1.2. html: Es el elemento raíz de la página HTML. Todo el contenido de la página va dentro de esta etiqueta.
+    El atributo 'lang="es"' es un ejemplo de atributo que define el idioma principal del contenido.
+-->
+
+<head>
+    <!--
+        1.3. head: Contiene metadatos sobre el documento, como el título de la página, enlaces a hojas de estilo,
+        scripts, y otra información que no es visible directamente en el navegador.
+    -->
+
+    <meta charset="UTF-8">
+    <!--
+        1.4. meta: La etiqueta <meta> se usa para especificar metadatos sobre el documento HTML.
+        Aquí, 'charset="UTF-8"' es un atributo que define la codificación de caracteres del documento,
+        asegurando que los caracteres especiales se muestren correctamente.
+    -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- etiqueta meta para la configuración de la vista en dispositivos móviles. -->
+
+    <title>2-day</title>
+    <!--
+        1.5. title: Define el título del documento, que aparece en la pestaña del navegador o en la barra de título.
+    -->
+
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+    <!--
+        1.6. body: Contiene todo el contenido visible de la página web, como texto, imágenes, enlaces, videos, etc.
+    -->
+
+    <h1>Fundamentos de HTML 👨🏻‍💻</h1>
+    <!--
+        1.7. Tags y Atributos:
+        - <h1> es una etiqueta (tag) de encabezado de nivel 1.
+        - Las etiquetas se usan para estructurar el contenido.
+        - Los atributos (como 'lang' en <html> o 'charset' en <meta>) proporcionan información adicional sobre la etiqueta.
+    -->
+
+    <p>Este es un párrafo de ejemplo. Las etiquetas HTML pueden ser en minúsculas o mayúsculas, pero la
+        <span style="text-transform: uppercase;">práctica recomendada</span> es usar minúsculas para consistencia.
+    </p>
+    <!--
+        1.8. Case Insensitivity (Insensibilidad a mayúsculas/minúsculas):
+        HTML no distingue entre mayúsculas y minúsculas para las etiquetas (por ejemplo, <P> es lo mismo que <p>).
+        Sin embargo, se recomienda encarecidamente usar minúsculas para todas las etiquetas y atributos.
+    -->
+
+    <p>
+        Algunos caracteres especiales requieren
+        entidades HTML: &lt; (menor que), &gt; (mayor que), &amp; (ampersand), &copy; (copyright).
+        También podemos usar &nbsp;&nbsp;&nbsp;espacios no separables.
+    </p>
+    <!--
+        1.9. HTML Entities (Entidades HTML):
+        Se utilizan para mostrar caracteres reservados (como < o >) o caracteres especiales
+        que no están fácilmente disponibles en el teclado.
+        - '&lt;' representa '<'
+        - '&gt;' representa '>'
+        - '&amp;' representa '&'
+        - '&copy;' representa '©'
+        - '&nbsp;' representa un espacio no separable (útil para múltiples espacios).
+    -->
+
+    <!-- Este es un comentario HTML. No se mostrará en el navegador. -->
+    <!--
+        1.10. HTML Comments (Comentarios HTML):
+        Se utilizan para añadir notas o explicaciones en el código fuente.
+        Son ignorados por el navegador y no son visibles para el usuario final.
+        Ayudan a documentar el código.
+    -->
+
+    <p>
+        Este párrafo demuestra cómo
+        los
+        espacios
+        en
+        blanco
+        extra
+        en
+        el
+        código
+        fuente
+        se
+        colapsan
+        en
+        uno
+        solo
+        al
+        renderizar
+        en
+        el
+        navegador.
+    </p>
+    <!--
+        1.11. Whitespaces (Espacios en blanco):
+        Múltiples espacios, tabulaciones y saltos de línea en el código fuente HTML
+        generalmente se renderizan como un solo espacio en el navegador.
+        Para forzar múltiples espacios visibles, se usan entidades como '&nbsp;'.
+    -->
+
+    <h2>Etiquetas Básicas Utilizadas en Este Documento:</h2>
+    <ul>
+        <li><code>&lt;!DOCTYPE html&gt;</code>: Define el tipo de documento.</li>
+        <li><code>&lt;html&gt;</code>: El elemento raíz de la página.</li>
+        <li><code>&lt;head&gt;</code>: Contiene metadatos (no visibles directamente).</li>
+        <li><code>&lt;body&gt;</code>: Contiene todo el contenido visible de la página.</li>
+        <li><code>&lt;meta&gt;</code>: Proporciona metadatos sobre el documento.</li>
+        <li><code>&lt;title&gt;</code>: Define el título de la pestaña del navegador.</li>
+        <li><code>&lt;h1&gt;</code>, <code>&lt;h2&gt;</code>: Etiquetas de encabezado.</li>
+        <li><code>&lt;p&gt;</code>: Etiqueta de párrafo.</li>
+        <li><code>&lt;span&gt;</code>: Etiqueta genérica en línea para aplicar estilos o semántica a una parte del texto.</li>
+        <li><code>&lt;ul&gt;</code>, <code>&lt;li&gt;</code>: Lista desordenada y elementos de lista.</li>
+        <li><code>&lt;code&gt;</code>: Muestra código de programación.</li>
+    </ul>
+
+    <p>Para más información, visita el <a href="https://roadmap.sh/html" target="_blank">Roadmap de HTML</a>.</p>
+    <!--
+        1.12. Enlace (<a>):
+        Un ejemplo de etiqueta de enlace con el atributo 'href' para la URL y 'target="_blank"' para abrir en una nueva pestaña.
+    -->
+
+</body>
+
+</html>
