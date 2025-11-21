@@ -5,7 +5,6 @@ const person = {
     lastName: ""
 }
 
-
 // 1. the person doesn't have a name, please add your first name and last name to the person
 
 // develop your code here
