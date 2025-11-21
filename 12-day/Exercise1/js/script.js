@@ -7,11 +7,8 @@ let farmAnimal = {
     sound: "Moo"
 };
 
-function getObjectProperties(Object) {
-
-    for (let Key in Object) {
-        console.log(Key);
-    }
+function getObjectProperties(object) {
+    return Object.keys(object)
 };
 
-getObjectProperties(farmAnimal);
+console.log(getObjectProperties(farmAnimal));
