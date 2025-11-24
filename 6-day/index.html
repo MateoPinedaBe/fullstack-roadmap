@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formstastic Day - User Registration</title>
+    <!-- Google Fonts: Poppins for headings, Open Sans for body text -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form action="#" method="get" novalidate>
+        <h1>User Registration Form</h1>
+
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input
+                type="text"
+                id="name"
+                name="name"
+                pattern="[A-Za-z\s]+"
+                maxlength="40"
+                required
+                title="Only alphabetic characters and spaces are allowed (max 40 characters)"
+                placeholder="Enter your first name"
+            >
+        </div>
+
+        <div class="form-group">
+            <label for="lastName">Last Name:</label>
+            <input
+                type="text"
+                id="lastName"
+                name="lastName"
+                pattern="[A-Za-z\s]+"
+                maxlength="40"
+                required
+                title="Only alphabetic characters and spaces are allowed (max 40 characters)"
+                placeholder="Enter your last name"
+            >
+        </div>
+
+        <div class="form-group">
+            <label for="telephone">Telephone:</label>
+            <input
+                type="tel"
+                id="telephone"
+                name="telephone"
+                pattern="[0-9]+"
+                title="Only numeric characters are allowed"
+                placeholder="e.g., 1234567890"
+            >
+        </div>
+
+        <div class="form-group">
+            <label for="birthday">Birthday:</label>
+            <input
+                type="date"
+                id="birthday"
+                name="birthday"
+                title="Please enter a valid date"
+            >
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                title="Please enter a valid email address"
+                placeholder="e.g., your.email@example.com"
+            >
+        </div>
+
+        <div class="form-group">
+            <label for="linkedinUrl">LinkedIn URL:</label>
+            <input
+                type="url"
+                id="linkedinUrl"
+                name="linkedinUrl"
+                placeholder="e.g., https://linkedin.com/in/yourprofile"
+                title="Please enter a valid URL (e.g., https://example.com)"
+            >
+        </div>
+
+        <fieldset class="form-group">
+            <legend>Gender:</legend>
+            <div class="radio-group">
+                <input type="radio" id="genderMale" name="gender" value="male">
+                <label for="genderMale">Male</label>
+
+                <input type="radio" id="genderFemale" name="gender" value="female">
+                <label for="genderFemale">Female</label>
+            </div>
+        </fieldset>
+
+        <div class="buttons">
+            <button type="submit">Submit</button>
+            <button type="reset">Cancel</button>
+        </div>
+    </form>
+    <script src="script.js"></script>
+</body>
+</html>
