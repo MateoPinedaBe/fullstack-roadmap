@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title lang="es">Planificador de Flujo de Trabajo Creativo</title>
+  <style>
+    body {
+      font-family: 'Open Sans', Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 30px;
+      background-color: #f8f8f8;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+
+    .planner-container {
+      padding: 20px 40px 40px 40px;
+      background: #e0e7e9;
+      border-radius: 15px;
+      max-width: 1300px;
+      width: 95%;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      margin-bottom: 30px;
+    }
+
+    .planner-main-title {
+      font-weight: 700;
+      font-size: 2.5em;
+      color: #2c3e50;
+      text-align: center;
+      margin-bottom: 20px;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.05);
+    }
+
+    .creative-workflow {
+      font-weight: 600;
+      font-size: 1.1em;
+      color: #457b9d;
+    }
+
+    #creative-planner {
+      width: 100%;
+      border-collapse: collapse;
+      border-spacing: 0;
+      margin-top: 2em;
+      background-color: #ffffff;
+      border: 1px solid #dcdcdc;
+    }
+
+    caption {
+      caption-side: bottom;
+      padding: 15px;
+      font-size: 1em;
+      color: #6a7f8e;
+      text-align: center;
+      font-style: italic;
+      margin-top: 10px;
+    }
+
+    #planner-header-span {
+      font-weight: 800;
+      font-size: 1.6em;
+      text-align: center;
+      background-color: #1d3557;
+      color: #f1faee;
+      padding: 18px;
+      letter-spacing: 1px;
+    }
+
+    .day-headers th {
+      font-weight: 700;
+      background-color: #457b9d;
+      color: #f1faee;
+      padding: 12px;
+      text-align: center;
+      border: 1px solid #3a6380;
+    }
+
+    th, td {
+      border: 1px solid #dcdcdc;
+      padding: 15px;
+      vertical-align: top;
+    }
+
+    .table-body tr:nth-child(odd) {
+      background-color: #f1faee;
+    }
+
+    .table-body tr:nth-child(even) {
+      background-color: #a8dadc;
+    }
+
+    .hour-column {
+      background-color: #e6e6e6;
+      font-weight: 600;
+      text-align: center;
+      white-space: nowrap;
+      width: 120px;
+      color: #1d3557;
+    }
+
+    .task-main-title {
+      font-weight: 700;
+      color: #1d3557;
+      margin-bottom: 8px;
+      display: block;
+    }
+
+    ul, ol, dl {
+        margin: 0;
+        padding-left: 20px;
+        list-style-position: inside;
+    }
+    ul {
+        list-style-type: '✨';
+    }
+    ol {
+        list-style-type: decimal;
+    }
+    li {
+        margin-bottom: 5px;
+        color: #333;
+    }
+    dt {
+        font-weight: 600;
+        color: #457b9d;
+        margin-top: 10px;
+        margin-bottom: 3px;
+    }
+    dd {
+        margin-left: 15px;
+        margin-bottom: 5px;
+        color: #555;
+    }
+
+    .page-footer {
+        margin-top: 40px;
+        font-size: 0.85em;
+        color: #777;
+        text-align: center;
+    }
+    .highlight-name {
+        background-color: #ffd700;
+        padding: 2px 6px;
+        border-radius: 4px;
+        font-weight: bold;
+        color: #333;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="planner-container">
+    <h1 class="planner-main-title">Mi <span class="creative-workflow">Flujo de Trabajo Creativo</span> Semanal</h1>
+    
+    <table id="creative-planner">
+        <caption lang="en">Planeador de Semanas</caption>
+        <thead>
+            <tr>
+                <th id="planner-header-span" scope="col" colspan="6">Planificación de Proyectos y Desarrollo</th>
+            </tr>
+            <tr class="day-headers">
+                <th scope="col">Hora</th>
+                <th scope="col">Lunes</th>
+                <th scope="col">Martes</th>
+                <th scope="col">Miércoles</th>
+                <th scope="col">Jueves</th>
+                <th scope="col">Viernes</th>
+            </tr>
+        </thead>
+        
+        <tbody class="table-body">
+            <tr>
+                <th scope="row" class="hour-column">9:00 AM</th>
+                <td>
+                    <span class="task-main-title">Brainstorming Sesión</span>
+                    <ol>
+                        <li>Definir objetivos del proyecto X</li>
+                        <li>Generar ideas para la campaña de marketing</li>
+                        <li>Crear mapa mental de funcionalidades</li>
+                        <li>Asignar roles iniciales para la semana</li>
+                    </ol>
+                </td>
+                <td>
+                    <span class="task-main-title">Desarrollo Frontend</span>
+                    <ul>
+                        <li>Implementar componente de navegación</li>
+                        <li>Estilizar botones y formularios</li>
+                        <li>Revisar compatibilidad con navegadores</li>
+                        <li>Optimizar carga de imágenes</li>
+                    </ul>
+                </td>
+                <td>
+                    <span class="task-main-title">Creación de Contenido</span>
+                    <dl>
+                        <dt>Artículo para Blog</dt>
+                        <dd>Escribir borrador y seleccionar imágenes.</dd>
+                        <dt>Optimización SEO</dt>
+                        <dd>Definir palabras clave y meta descripciones.</dd>
+                        <dt>Programación</dt>
+                        <dd>Programar publicación en CMS.</dd>
+                    </dl>
+                </td>
+                <td>
+                    <span class="task-main-title">Gestión de Proyectos</span>
+                    <ol>
+                        <li>Revisar progreso de tareas en Jira</li>
+                        <li>Actualizar Gantt chart</li>
+                        <li>Identificar posibles bloqueos</li>
+                        <li>Preparar agenda para reunión de equipo</li>
+                    </ol>
+                </td>
+                <td>
+                    <span class="task-main-title">Aprendizaje y Desarrollo</span>
+                    <ul>
+                        <li>Explorar nueva librería JS (ej. Svelte)</li>
+                        <li>Ver tutorial sobre Docker</li>
+                        <li>Leer artículo sobre arquitectura de microservicios</li>
+                        <li>Experimentar con WebAssembly</li>
+                    </ul>
+                </td>
+            </tr>
+            
+            <tr>
+                <th scope="row" class="hour-column">11:00 AM</th>
+                <td>
+                    <span class="task-main-title">Reunión de Cliente</span>
+                    <ol>
+                        <li>Presentar propuesta inicial</li>
+                        <li>Recopilar feedback detallado</li>
+                        <li>Anotar requisitos adicionales</li>
+                        <li>Establecer próximos pasos</li>
+                    </ol>
+                </td>
+                <td>
+                    <span class="task-main-title">Desarrollo Backend</span>
+                    <ul>
+                        <li>Diseñar esquema de base de datos</li>
+                        <li>Implementar endpoints REST API</li>
+                        <li>Escribir pruebas unitarias para API</li>
+                        <li>Configurar autenticación JWT</li>
+                    </ul>
+                </td>
+                <td>
+                    <span class="task-main-title">Planificación RRSS</span>
+                    <dl>
+                        <dt>Diseño Gráfico</dt>
+                        <dd>Crear gráficos para Instagram/Facebook.</dd>
+                        <dt>Redacción</dt>
+                        <dd>Redactar copys para posts.</dd>
+                        <dt>Programación</dt>
+                        <dd>Programar publicaciones en Hootsuite.</dd>
+                        <dt>Análisis</dt>
+                        <dd>Analizar métricas de la semana anterior.</dd>
+                    </dl>
+                </td>
+                <td>
+                    <span class="task-main-title">Revisión de Presupuesto</span>
+                    <ol>
+                        <li>Analizar gastos del mes</li>
+                        <li>Ajustar proyecciones financieras</li>
+                        <li>Preparar informe para dirección</li>
+                        <li>Buscar oportunidades de ahorro</li>
+                    </ol>
+                </td>
+                <td>
+                    <span class="task-main-title">Revisión de Código</span>
+                    <ul>
+                        <li>Revisar PRs de compañeros</li>
+                        <li>Dejar comentarios constructivos</li>
+                        <li>Aprobar cambios listos para merge</li>
+                        <li>Actualizar rama principal</li>
+                    </ul>
+                </td>
+            </tr>
+
+            <tr>
+                <th scope="row" class="hour-column">2:00 PM</th>
+                <td>
+                    <span class="task-main-title">Diseño de Mockups</span>
+                    <ol>
+                        <li>Crear wireframes en Figma</li>
+                        <li>Diseñar interfaz de usuario (UI)</li>
+                        <li>Definir paleta de colores</li>
+                        <li>Preparar prototipo interactivo</li>
+                    </ol>
+                </td>
+                <td>
+                    <span class="task-main-title">Testing y QA</span>
+                    <ul>
+                        <li>Ejecutar pruebas de integración</li>
+                        <li>Reportar bugs en Bugzilla</li>
+                        <li>Verificar rendimiento de la aplicación</li>
+                        <li>Realizar pruebas de usabilidad</li>
+                    </ul>
+                </td>
+                <td>
+                    <span class="task-main-title">Blog Post Final</span>
+                    <dl>
+                        <dt>Edición</dt>
+                        <dd>Revisar gramática y estilo.</dd>
+                        <dt>Optimización</dt>
+                        <dd>Añadir enlaces internos/externos y meta descripción.</dd>
+                        <dt>Publicación</dt>
+                        <dd>Publicar y compartir en redes.</dd>
+                    </dl>
+                </td>
+                <td>
+                    <span class="task-main-title">Preparación Presentación Cliente</span>
+                    <ol>
+                        <li>Diseñar diapositivas en Keynote</li>
+                        <li>Practicar la presentación</li>
+                        <li>Anticipar preguntas</li>
+                        <li>Coordinar logística de la reunión</li>
+                    </ol>
+                </td>
+                <td>
+                    <span class="task-main-title">Informe Semanal</span>
+                    <ul>
+                        <li>Recopilar datos de rendimiento</li>
+                        <li>Redactar resumen ejecutivo</li>
+                        <li>Crear gráficos y tablas</li>
+                        <li>Enviar informe a stakeholders</li>
+                    </ul>
+                </td>
+            </tr>
+
+            <tr>
+                <th scope="row" class="hour-column">4:00 PM</th>
+                <td>
+                    <span class="task-main-title">Feedback Interno</span>
+                    <ol>
+                        <li>Presentar mockups al equipo</li>
+                        <li>Recibir sugerencias y críticas</li>
+                        <li>Iterar sobre el diseño</li>
+                        <li>Documentar decisiones</li>
+                    </ol>
+                </td>
+                <td>
+                    <span class="task-main-title">Documentación Técnica</span>
+                    <ul>
+                        <li>Actualizar README del proyecto</li>
+                        <li>Escribir guías para nuevos desarrolladores</li>
+                        <li>Documentar API endpoints</li>
+                        <li>Crear diagramas de arquitectura</li>
+                    </ul>
+                </td>
+                <td>
+                    <span class="task-main-title">Optimización SEO</span>
+                    <dl>
+                        <dt>Auditoría</dt>
+                        <dd>Auditar sitio web con Lighthouse.</dd>
+                        <dt>Implementación</dt>
+                        <dd>Implementar cambios en meta tags.</dd>
+                        <dt>Monitoreo</dt>
+                        <dd>Monitorear ranking de palabras clave.</dd>
+                    </dl>
+                </td>
+                <td>
+                    <span class="task-main-title">Reunión con Proveedores</span>
+                    <ol>
+                        <li>Evaluar nuevas herramientas</li>
+                        <li>Negociar contratos</li>
+                        <li>Revisar SLAs</li>
+                        <li>Planificar integraciones</li>
+                    </ol>
+                </td>
+                <td>
+                    <span class="task-main-title">Planificación Fin de Semana</span>
+                    <ul>
+                        <li>Organizar actividades personales</li>
+                        <li>Hacer lista de compras</li>
+                        <li>Reservar restaurante/evento</li>
+                        <li>Desconectar del trabajo</li>
+                    </ul>
+                </td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th scope="row" colspan="6">¡Productividad y creatividad en cada paso!</th>
+            </tr>
+        </tfoot>
+    </table>
+  </div>
+
+    <p class="page-footer">&copy; 2025 - Diseñado por <span class="highlight-name">Mateo Pineda</span></p>
+</body>
+</html>
