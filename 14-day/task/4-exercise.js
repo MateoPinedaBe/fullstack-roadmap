@@ -15,4 +15,6 @@ function modifyString(input, index) {
         .join('');
 }
 
+// Test
+
 console.log(modifyString("Hola Mundo", 0))

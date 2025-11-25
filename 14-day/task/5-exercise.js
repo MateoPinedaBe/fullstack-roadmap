@@ -17,6 +17,8 @@ function reverseFirstAndLastCharacters(input) {
             (String(input).trim());
 }
 
+// Test
+
 console.log(reverseFirstAndLastCharacters("Perro"))
 console.log(reverseFirstAndLastCharacters(""))
 console.log(reverseFirstAndLastCharacters(1001))
