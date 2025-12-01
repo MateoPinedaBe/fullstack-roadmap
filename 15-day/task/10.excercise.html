@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 10</title>
+</head>
+
+<body>
+
+    <form>
+        <h3> Calculator </h3>
+        Number One : <input type="number" id="numberOne" /> <br>
+        Number Two : <input type="number" id="numberTwo" /> <br>
+
+        <input type="button" onclick="multiply()" value="Multiply" />
+        <input type="button" onclick="divide()" value="Divide" />
+    </form>
+
+    <p> Result: <br>
+        <span id="result"></span>
+    </p>
+
+    <script>
+        // 10. Multiplication and Division (User Input)
+        // Write a JavaScript program to calculate multiplication and division of two numbers (input from the user).
+
+        function multiply() {
+            let num1 = document.getElementById("numberOne").value;
+            let num2 = document.getElementById("numberTwo").value;
+
+            document.getElementById("result").innerHTML = num1 * num2;
+        }
+
+        function divide() {
+            let num1 = document.getElementById("numberOne").value;
+            let num2 = document.getElementById("numberTwo").value;
+
+            document.getElementById("result").innerHTML = num1 / num2;
+        }
+    </script>
+</body>
+
+</html>

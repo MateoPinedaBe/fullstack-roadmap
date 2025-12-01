@@ -22,3 +22,6 @@ function reverseFirstAndLastCharacters(input) {
 console.log(reverseFirstAndLastCharacters("Perro"))
 console.log(reverseFirstAndLastCharacters(""))
 console.log(reverseFirstAndLastCharacters(1001))
+
+
+console.log(Boolean(10>15))

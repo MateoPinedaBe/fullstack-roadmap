@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 5</title>
+</head>
+
+<body>
+    <pre id='stringOne'> w3source </pre>
+
+    <script>
+        // 5. Rotate String 'w3resource' Periodically
+        // Write a JavaScript program to rotate the string 'w3resource' in the right direction.
+        // This is done by periodically removing one letter from the string end and attaching it to the front. 
+
+        function rotateString(id) {
+            let element = document.getElementById(id);
+            
+            // se crea variable que almacena el nodo donde está el texto.
+            let stringNode = element.childNodes[0];
+
+            // se obtiene el texto dentro del nodo que lo contiene.
+            let currentString = stringNode.data;
+
+            // Se pone el intervalo donde los caracteres se van a la derecha.
+            setInterval(function () {
+                currentString = currentString[currentString.length - 1] + currentString.substring(0, currentString.length - 1);
+                stringNode.data = currentString;
+            }, 100);
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            rotateString('stringOne');
+        });
+    </script>
+</body>
+
+</html>
